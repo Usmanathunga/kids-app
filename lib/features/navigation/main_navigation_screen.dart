@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../child/child_dashboard.dart';
 import '../parent/parent_dashboard.dart';
+import '../settings/app_settings_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -28,8 +29,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         extendBody: true,
         body: SafeArea(
           child: IndexedStack(
-            index: _selectedIndex == 2 ? 1 : 0,
-            children: const [ChildDashboard(), ParentDashboard()],
+            index: _selectedIndex,
+            children: const [ChildDashboard(), AppSettingsScreen(), ParentDashboard()],
           ),
         ),
         bottomNavigationBar: _FloatingNav(
