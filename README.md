@@ -1,4 +1,4 @@
-# my_first_app
+# Kids Activities
 
 A new Flutter project.
 
